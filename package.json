@@ -1,5 +1,5 @@
 {
-  "name": "code-like-google",
+  "name": "uber-clone-nextjs",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,7 @@
     "format-check": "prettier --check .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "lint-css": "stylelint './src/components/**/styles.ts'",
-    "test-all": "yarn lint && yarn lint-css && yarn format-check && yarn type-check && yarn build",
+    "test-all": "yarn lint && yarn lint-css && yarn format-check && yarn type-check",
     "prepare": "husky install"
   },
   "husky": {
@@ -26,7 +26,8 @@
     ]
   },
   "dependencies": {
-    "next": "latest",
+    "mapbox-gl": "^2.5.1",
+    "next": "^12.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
@@ -35,11 +36,13 @@
   "devDependencies": {
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.23",
+    "@types/mapbox-gl": "^2.4.2",
     "@types/node": "^14.14.25",
     "@types/react": "^17.0.1",
     "@types/styled-components": "^5.1.15",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "autoprefixer": "^10.4.0",
     "babel-jest": "^27.0.2",
     "babel-plugin-styled-components": "^1.13.2",
     "eslint": "^7.32.0",
@@ -50,14 +53,17 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.26.1",
-    "identity-obj-proxy": "^3.0.0",
     "husky": "^7.0.0",
+    "identity-obj-proxy": "^3.0.0",
     "lint-staged": "^10.0.10",
+    "postcss": "^8.3.11",
     "prettier": "^2.0.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
+    "tailwind-styled-components": "^2.0.3",
+    "tailwindcss": "^2.2.19",
     "typescript": "^4.1.3"
   }
 }

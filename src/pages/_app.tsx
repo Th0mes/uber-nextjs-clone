@@ -1,12 +1,9 @@
 import type { AppProps } from 'next/app'
-import Layout from 'src/layouts'
+import 'tailwindcss/tailwind.css'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+  return <Component {...pageProps} />
 }
 
 export default MyApp

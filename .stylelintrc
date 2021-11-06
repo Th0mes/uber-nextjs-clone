@@ -5,8 +5,8 @@
     "stylelint-config-styled-components"
   ],
   "syntax": "scss",
-	"rules": {
-		"indentation": "tab",
-		"declaration-empty-line-before": "always"
-	}
+  "rules": {
+    "indentation": "tab",
+    "declaration-empty-line-before": "always"
+  }
 }
