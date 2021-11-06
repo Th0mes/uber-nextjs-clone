@@ -1,18 +1,19 @@
 import type { NextPage } from 'next'
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'src/components/Link'
 import tw from 'tailwind-styled-components'
 
 const Search: NextPage = () => {
+  const [pickup, setPickup] = useState('')
+  const [dropoff, setDropoff] = useState('')
+
   return (
     <Container>
       {/* ButtonContainer */}
-      <ButtonContainer>
-        <Link to={'/'}>
-          <BackButton
-            src={'https://img.icons8.com/ios-filled/50/000000/left.png'}
-          />
-        </Link>
+      <ButtonContainer to={'/'}>
+        <BackButton
+          src={'https://img.icons8.com/ios-filled/50/000000/left.png'}
+        />
       </ButtonContainer>
       {/* InputContainer */}
       <InputContainer>
@@ -30,8 +31,16 @@ const Search: NextPage = () => {
           />
         </FromToIcons>
         <InputBoxes>
-          <Input placeholder={'Enter Pickup Location'} />
-          <Input placeholder={'Where to?'} />
+          <Input
+            placeholder={'Enter Pickup Location'}
+            value={pickup}
+            onChange={e => setPickup(e.target.value)}
+          />
+          <Input
+            placeholder={'Where to?'}
+            value={dropoff}
+            onChange={e => setDropoff(e.target.value)}
+          />
         </InputBoxes>
         <PlusIcon src={'https://img.icons8.com/ios/50/000000/plus-math.png'} />
       </InputContainer>
@@ -43,7 +52,12 @@ const Search: NextPage = () => {
         Saved Places
       </SavedPlaces>
       {/* Confirm Location */}
-      <ConfirmLocation>
+      <ConfirmLocation
+        to={{
+          pathname: '/confirm',
+          query: { pickup: pickup, dropoff: dropoff }
+        }}
+      >
         <ConfirmButton>Confirm Locations</ConfirmButton>
       </ConfirmLocation>
     </Container>
@@ -55,7 +69,8 @@ const Container = tw.div`
   h-screen
 `
 
-const ButtonContainer = tw.div`
+const ButtonContainer = tw(Link)`
+  flex
   bg-white
   px-4
 `
@@ -134,7 +149,7 @@ const StarIcon = tw.img`
   mr-2
 `
 
-const ConfirmLocation = tw.div`
+const ConfirmLocation = tw(Link)`
   flex
   p-2.5
 `
@@ -145,6 +160,7 @@ const ConfirmButton = tw.button`
   text-white
   font-semibold
   py-2
+  text-xl
 `
 
 export default Search

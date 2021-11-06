@@ -43,15 +43,10 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
 
-          <link
+          {/* <link
             href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
             rel="stylesheet"
-          />
-
-          <link
-            href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
-            rel="stylesheet"
-          />
+          /> */}
         </Head>
         <body>
           <Main />

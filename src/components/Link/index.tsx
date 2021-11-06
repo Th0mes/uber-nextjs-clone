@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from './styles'
 
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  to: string
+  to: string | object
   prefetch?: boolean
   // we can add more properties we need from next/link in the future
 }
