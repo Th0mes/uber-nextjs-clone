@@ -1,13 +1,11 @@
-import * as React from 'react'
-import { Link } from './styles'
+import Link from 'next/link'
+import React from 'react'
 
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   to: string | object
   prefetch?: boolean
-  // we can add more properties we need from next/link in the future
 }
 
-// Forward Refs, is useful
 export default React.forwardRef(
   ({ to, prefetch, ...props }: LinkProps, ref: any) => {
     return (

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
 import Link from 'src/components/Link'
+import React, { useEffect, useState } from 'react'
 import Map from 'src/components/Map'
 import RideSelector from 'src/components/RideSelector'
 import tw from 'tailwind-styled-components'

@@ -10,7 +10,7 @@
     "format-check": "prettier --check .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "lint-css": "stylelint './src/components/**/styles.ts'",
-    "test-all": "yarn lint && yarn lint-css && yarn format-check && yarn type-check",
+    "test-all": "yarn lint && yarn lint-css && yarn format-check && yarn type-check && yarn build",
     "prepare": "husky install"
   },
   "husky": {
@@ -54,6 +54,8 @@
     "identity-obj-proxy": "^3.0.0",
     "lint-staged": "^10.0.10",
     "postcss": "^8.3.11",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
